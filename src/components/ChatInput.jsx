@@ -52,7 +52,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: #fff;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -61,8 +61,11 @@ const Container = styled.div`
   .button-container {
     display: flex;
     align-items: center;
-    color: white;
+    color: red;
+    background:#e6e6e6;
+
     gap: 1rem;
+    padding:10px;
     .emoji {
       position: relative;
       svg {
@@ -105,17 +108,21 @@ const Container = styled.div`
     align-items: center;
     gap: 2rem;
     background-color: #ffffff34;
+
     input {
       width: 90%;
       height: 60%;
       background-color: transparent;
-      color: white;
+      color: black;
       border: none;
       padding-left: 1rem;
+      border:1px solid #ced4da;
+      padding:10px;
       font-size: 1.2rem;
+      margin-left:5%;
 
       &::selection {
-        background-color: #9a86f3;
+        background-color: red;
       }
       &:focus {
         outline: none;

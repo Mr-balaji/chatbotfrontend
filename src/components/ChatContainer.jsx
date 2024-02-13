@@ -120,6 +120,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background:#fff;
     .user-details {
       display: flex;
       align-items: center;
@@ -131,7 +132,7 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: black;
         }
       }
     }
@@ -142,6 +143,7 @@ const Container = styled.div`
     flex-direction: column;
     gap: 1rem;
     overflow: auto;
+    background:#fff;
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
@@ -156,10 +158,10 @@ const Container = styled.div`
       .content {
         max-width: 40%;
         overflow-wrap: break-word;
-        padding: 1rem;
+        padding: 10px;
         font-size: 1.1rem;
-        border-radius: 1rem;
-        color: #d1d1d1;
+        border-radius: 11px;
+        color: black;
         @media screen and (min-width: 720px) and (max-width: 1080px) {
           max-width: 70%;
         }
@@ -168,13 +170,13 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background-color: #0a80ff;
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background-color: #ebebeb;
       }
     }
   }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.svg";
-
+import { TabView, TabPanel } from 'primereact/tabview';
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
@@ -22,10 +22,24 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
+            <div>
             <h3>Balaji ChatBot</h3>
+            </div>
+            <div className="mr-3 flex justify-between w-[30%]">
+            <i className="pi  pi-user " style={{ fontSize: '1rem' }}></i>
+            <i className="pi  pi-plus " style={{ fontSize: '1rem' }}></i>
+
+            </div>
           </div>
+
+
           <div className="contacts">
-            {contacts.map((contact, index) => {
+
+          <div className="card">
+
+        </div>
+
+                {contacts.map((contact, index) => {
               return (
                 <div
                   key={contact._id}
@@ -46,6 +60,8 @@ export default function Contacts({ contacts, changeChat }) {
                 </div>
               );
             })}
+
+
           </div>
           <div className="current-user">
             <div className="avatar">
@@ -71,22 +87,24 @@ const Container = styled.div`
   .brand {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
+    background:#fff;
     img {
       height: 2rem;
     }
     h3 {
-      color: white;
+      color: black;
       text-transform: uppercase;
     }
   }
   .contacts {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background:#ffff;
+    color:black;
     overflow: auto;
     gap: 0.8rem;
+    border  :2px solid aqua;
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
@@ -96,10 +114,10 @@ const Container = styled.div`
       }
     }
     .contact {
-      background-color: #ffffff34;
+
       min-height: 5rem;
       cursor: pointer;
-      width: 90%;
+     border-bottom:2px solid aqua;
       border-radius: 0.2rem;
       padding: 0.4rem;
       display: flex;
@@ -113,12 +131,12 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: black;
         }
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: #f0f0f0;
     }
   }
 
